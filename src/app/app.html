@@ -1,31 +1,11 @@
 <router-outlet />
 <body class="bg-black text-white font-sans">
-    <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 bg-gradient-to-b from-black to-transparent px-4 py-4 md:px-16">
-        <div class="flex items-center justify-between">
-            <div class="flex items-center space-x-8">
-                <h1 class="text-netflix text-2xl md:text-3xl font-bold">CineFlix</h1>
-                <div class="hidden md:flex space-x-6">
-                    <a href="#" class="hover:text-gray-300 transition-colors">Inicio</a>
-                    <a href="#" class="hover:text-gray-300 transition-colors">Series</a>
-                    <a href="#" class="hover:text-gray-300 transition-colors">Películas</a>
-                    <a href="#" class="hover:text-gray-300 transition-colors">Novedades</a>
-                    <a href="#" class="hover:text-gray-300 transition-colors">Mi Lista</a>
-                </div>
-            </div>
-            <div class="flex items-center space-x-4">
-                <div class="relative hidden md:block">
-                    <input type="text" placeholder="Buscar..." class="bg-black border border-gray-600 rounded px-4 py-2 text-sm focus:outline-none focus:border-white">
-                </div>
-                <div class="w-8 h-8 bg-netflix rounded"></div>
-            </div>
-        </div>
-    </nav>
+  <app-navbar></app-navbar>
 
     <!-- Hero Section -->
     <section class="relative h-screen flex items-center">
         <div class="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent z-10"></div>
-        <img src="/placeholder.svg?height=1080&width=1920" alt="Película destacada" class="absolute inset-0 w-full h-full object-cover">
+        <img src="https://res.cloudinary.com/dsadfgmfn/image/upload/v1750033447/civil310_xrehlm.jpg" alt="Película destacada" class="absolute inset-0 w-full h-full object-cover">
 
         <div class="relative z-20 px-4 md:px-16 max-w-2xl">
             <h1 class="text-4xl md:text-6xl font-bold mb-4">Stranger Things</h1>
@@ -206,49 +186,8 @@
             </div>
         </section>
     </main>
+    <app-footer></app-footer>
 
-    <!-- Footer -->
-    <footer class="bg-netflix-dark px-4 md:px-16 py-12">
-        <div class="max-w-6xl mx-auto">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="font-semibold mb-4">Empresa</h3>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="#" class="hover:text-white">Acerca de</a></li>
-                        <li><a href="#" class="hover:text-white">Empleos</a></li>
-                        <li><a href="#" class="hover:text-white">Prensa</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="font-semibold mb-4">Soporte</h3>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="#" class="hover:text-white">Centro de ayuda</a></li>
-                        <li><a href="#" class="hover:text-white">Contacto</a></li>
-                        <li><a href="#" class="hover:text-white">Términos de uso</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="font-semibold mb-4">Cuenta</h3>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="#" class="hover:text-white">Mi cuenta</a></li>
-                        <li><a href="#" class="hover:text-white">Privacidad</a></li>
-                        <li><a href="#" class="hover:text-white">Prueba gratuita</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="font-semibold mb-4">Conecta</h3>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="#" class="hover:text-white">Facebook</a></li>
-                        <li><a href="#" class="hover:text-white">Twitter</a></li>
-                        <li><a href="#" class="hover:text-white">Instagram</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
-                <p>&copy; 2024 CineFlix. Todos los derechos reservados.</p>
-            </div>
-        </div>
-    </footer>
 
     <style>
         .scrollbar-hide {
