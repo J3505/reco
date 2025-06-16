@@ -1,4 +1,262 @@
 <router-outlet />
-<h1 class="text-center text-3xl font-bold bg-amber-100">
-  Peliculas de Marvel
-</h1>
+<body class="bg-black text-white font-sans">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-gradient-to-b from-black to-transparent px-4 py-4 md:px-16">
+        <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-8">
+                <h1 class="text-netflix text-2xl md:text-3xl font-bold">CineFlix</h1>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#" class="hover:text-gray-300 transition-colors">Inicio</a>
+                    <a href="#" class="hover:text-gray-300 transition-colors">Series</a>
+                    <a href="#" class="hover:text-gray-300 transition-colors">Películas</a>
+                    <a href="#" class="hover:text-gray-300 transition-colors">Novedades</a>
+                    <a href="#" class="hover:text-gray-300 transition-colors">Mi Lista</a>
+                </div>
+            </div>
+            <div class="flex items-center space-x-4">
+                <div class="relative hidden md:block">
+                    <input type="text" placeholder="Buscar..." class="bg-black border border-gray-600 rounded px-4 py-2 text-sm focus:outline-none focus:border-white">
+                </div>
+                <div class="w-8 h-8 bg-netflix rounded"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center">
+        <div class="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent z-10"></div>
+        <img src="/placeholder.svg?height=1080&width=1920" alt="Película destacada" class="absolute inset-0 w-full h-full object-cover">
+
+        <div class="relative z-20 px-4 md:px-16 max-w-2xl">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Stranger Things</h1>
+            <p class="text-lg md:text-xl mb-6 text-gray-200">
+                Cuando un niño desaparece, su madre, un jefe de policía y sus amigos deben enfrentar fuerzas terroríficas para recuperarlo.
+            </p>
+            <div class="flex space-x-4">
+                <button class="bg-white text-black px-8 py-3 rounded font-semibold hover:bg-gray-200 transition-colors flex items-center">
+                    <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/>
+                    </svg>
+                    Reproducir
+                </button>
+                <button class="bg-gray-600 bg-opacity-70 px-8 py-3 rounded font-semibold hover:bg-opacity-50 transition-colors flex items-center">
+                    <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    Más información
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Movie Sections -->
+    <main class="relative z-10 -mt-32 px-4 md:px-16 space-y-12">
+        <!-- Trending Now -->
+        <section>
+            <h2 class="text-2xl font-bold mb-4">Tendencias ahora</h2>
+            <div class="flex space-x-4 overflow-x-auto pb-4 scrollbar-hide">
+                <div class="flex-none w-48 md:w-64">
+                    <img src="/placeholder.svg?height=360&width=256" alt="Película 1" class="w-full h-36 md:h-48 object-cover rounded hover:scale-105 transition-transform cursor-pointer">
+                    <h3 class="mt-2 text-sm font-medium">The Witcher</h3>
+                </div>
+                <div class="flex-none w-48 md:w-64">
+                    <img src="/placeholder.svg?height=360&width=256" alt="Película 2" class="w-full h-36 md:h-48 object-cover rounded hover:scale-105 transition-transform cursor-pointer">
+                    <h3 class="mt-2 text-sm font-medium">Money Heist</h3>
+                </div>
+                <div class="flex-none w-48 md:w-64">
+                    <img src="/placeholder.svg?height=360&width=256" alt="Película 3" class="w-full h-36 md:h-48 object-cover rounded hover:scale-105 transition-transform cursor-pointer">
+                    <h3 class="mt-2 text-sm font-medium">Ozark</h3>
+                </div>
+                <div class="flex-none w-48 md:w-64">
+                    <img src="/placeholder.svg?height=360&width=256" alt="Película 4" class="w-full h-36 md:h-48 object-cover rounded hover:scale-105 transition-transform cursor-pointer">
+                    <h3 class="mt-2 text-sm font-medium">Dark</h3>
+                </div>
+                <div class="flex-none w-48 md:w-64">
+                    <img src="/placeholder.svg?height=360&width=256" alt="Película 5" class="w-full h-36 md:h-48 object-cover rounded hover:scale-105 transition-transform cursor-pointer">
+                    <h3 class="mt-2 text-sm font-medium">Bridgerton</h3>
+                </div>
+                <div class="flex-none w-48 md:w-64">
+                    <img src="/placeholder.svg?height=360&width=256" alt="Película 6" class="w-full h-36 md:h-48 object-cover rounded hover:scale-105 transition-transform cursor-pointer">
+                    <h3 class="mt-2 text-sm font-medium">The Crown</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popular Movies -->
+        <section>
+            <h2 class="text-2xl font-bold mb-4">Películas populares</h2>
+            <div class="flex space-x-4 overflow-x-auto pb-4 scrollbar-hide">
+                <div class="flex-none w-48 md:w-64">
+                    <img src="/placeholder.svg?height=360&width=256" alt="Avengers" class="w-full h-36 md:h-48 object-cover rounded hover:scale-105 transition-transform cursor-pointer">
+                    <h3 class="mt-2 text-sm font-medium">Avengers: Endgame</h3>
+                </div>
+                <div class="flex-none w-48 md:w-64">
+                    <img src="/placeholder.svg?height=360&width=256" alt="Spider-Man" class="w-full h-36 md:h-48 object-cover rounded hover:scale-105 transition-transform cursor-pointer">
+                    <h3 class="mt-2 text-sm font-medium">Spider-Man: No Way Home</h3>
+                </div>
+                <div class="flex-none w-48 md:w-64">
+                    <img src="/placeholder.svg?height=360&width=256" alt="Dune" class="w-full h-36 md:h-48 object-cover rounded hover:scale-105 transition-transform cursor-pointer">
+                    <h3 class="mt-2 text-sm font-medium">Dune</h3>
+                </div>
+                <div class="flex-none w-48 md:w-64">
+                    <img src="/placeholder.svg?height=360&width=256" alt="Top Gun" class="w-full h-36 md:h-48 object-cover rounded hover:scale-105 transition-transform cursor-pointer">
+                    <h3 class="mt-2 text-sm font-medium">Top Gun: Maverick</h3>
+                </div>
+                <div class="flex-none w-48 md:w-64">
+                    <img src="/placeholder.svg?height=360&width=256" alt="Black Panther" class="w-full h-36 md:h-48 object-cover rounded hover:scale-105 transition-transform cursor-pointer">
+                    <h3 class="mt-2 text-sm font-medium">Black Panther</h3>
+                </div>
+                <div class="flex-none w-48 md:w-64">
+                    <img src="/placeholder.svg?height=360&width=256" alt="The Batman" class="w-full h-36 md:h-48 object-cover rounded hover:scale-105 transition-transform cursor-pointer">
+                    <h3 class="mt-2 text-sm font-medium">The Batman</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Netflix Originals -->
+        <section>
+            <h2 class="text-2xl font-bold mb-4">Originales de CineFlix</h2>
+            <div class="flex space-x-4 overflow-x-auto pb-4 scrollbar-hide">
+                <div class="flex-none w-48 md:w-64">
+                    <img src="/placeholder.svg?height=360&width=256" alt="House of Cards" class="w-full h-36 md:h-48 object-cover rounded hover:scale-105 transition-transform cursor-pointer">
+                    <h3 class="mt-2 text-sm font-medium">House of Cards</h3>
+                </div>
+                <div class="flex-none w-48 md:w-64">
+                    <img src="/placeholder.svg?height=360&width=256" alt="Orange is the New Black" class="w-full h-36 md:h-48 object-cover rounded hover:scale-105 transition-transform cursor-pointer">
+                    <h3 class="mt-2 text-sm font-medium">Orange is the New Black</h3>
+                </div>
+                <div class="flex-none w-48 md:w-64">
+                    <img src="/placeholder.svg?height=360&width=256" alt="Narcos" class="w-full h-36 md:h-48 object-cover rounded hover:scale-105 transition-transform cursor-pointer">
+                    <h3 class="mt-2 text-sm font-medium">Narcos</h3>
+                </div>
+                <div class="flex-none w-48 md:w-64">
+                    <img src="/placeholder.svg?height=360&width=256" alt="The Umbrella Academy" class="w-full h-36 md:h-48 object-cover rounded hover:scale-105 transition-transform cursor-pointer">
+                    <h3 class="mt-2 text-sm font-medium">The Umbrella Academy</h3>
+                </div>
+                <div class="flex-none w-48 md:w-64">
+                    <img src="/placeholder.svg?height=360&width=256" alt="Squid Game" class="w-full h-36 md:h-48 object-cover rounded hover:scale-105 transition-transform cursor-pointer">
+                    <h3 class="mt-2 text-sm font-medium">Squid Game</h3>
+                </div>
+                <div class="flex-none w-48 md:w-64">
+                    <img src="/placeholder.svg?height=360&width=256" alt="Wednesday" class="w-full h-36 md:h-48 object-cover rounded hover:scale-105 transition-transform cursor-pointer">
+                    <h3 class="mt-2 text-sm font-medium">Wednesday</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Action Movies -->
+        <section>
+            <h2 class="text-2xl font-bold mb-4">Películas de acción</h2>
+            <div class="flex space-x-4 overflow-x-auto pb-4 scrollbar-hide">
+                <div class="flex-none w-48 md:w-64">
+                    <img src="/placeholder.svg?height=360&width=256" alt="John Wick" class="w-full h-36 md:h-48 object-cover rounded hover:scale-105 transition-transform cursor-pointer">
+                    <h3 class="mt-2 text-sm font-medium">John Wick</h3>
+                </div>
+                <div class="flex-none w-48 md:w-64">
+                    <img src="/placeholder.svg?height=360&width=256" alt="Fast & Furious" class="w-full h-36 md:h-48 object-cover rounded hover:scale-105 transition-transform cursor-pointer">
+                    <h3 class="mt-2 text-sm font-medium">Fast & Furious</h3>
+                </div>
+                <div class="flex-none w-48 md:w-64">
+                    <img src="/placeholder.svg?height=360&width=256" alt="Mission Impossible" class="w-full h-36 md:h-48 object-cover rounded hover:scale-105 transition-transform cursor-pointer">
+                    <h3 class="mt-2 text-sm font-medium">Mission: Impossible</h3>
+                </div>
+                <div class="flex-none w-48 md:w-64">
+                    <img src="/placeholder.svg?height=360&width=256" alt="Mad Max" class="w-full h-36 md:h-48 object-cover rounded hover:scale-105 transition-transform cursor-pointer">
+                    <h3 class="mt-2 text-sm font-medium">Mad Max: Fury Road</h3>
+                </div>
+                <div class="flex-none w-48 md:w-64">
+                    <img src="/placeholder.svg?height=360&width=256" alt="Die Hard" class="w-full h-36 md:h-48 object-cover rounded hover:scale-105 transition-transform cursor-pointer">
+                    <h3 class="mt-2 text-sm font-medium">Die Hard</h3>
+                </div>
+                <div class="flex-none w-48 md:w-64">
+                    <img src="/placeholder.svg?height=360&width=256" alt="The Matrix" class="w-full h-36 md:h-48 object-cover rounded hover:scale-105 transition-transform cursor-pointer">
+                    <h3 class="mt-2 text-sm font-medium">The Matrix</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comedy Movies -->
+        <section class="pb-16">
+            <h2 class="text-2xl font-bold mb-4">Comedias</h2>
+            <div class="flex space-x-4 overflow-x-auto pb-4 scrollbar-hide">
+                <div class="flex-none w-48 md:w-64">
+                    <img src="/placeholder.svg?height=360&width=256" alt="The Hangover" class="w-full h-36 md:h-48 object-cover rounded hover:scale-105 transition-transform cursor-pointer">
+                    <h3 class="mt-2 text-sm font-medium">The Hangover</h3>
+                </div>
+                <div class="flex-none w-48 md:w-64">
+                    <img src="/placeholder.svg?height=360&width=256" alt="Superbad" class="w-full h-36 md:h-48 object-cover rounded hover:scale-105 transition-transform cursor-pointer">
+                    <h3 class="mt-2 text-sm font-medium">Superbad</h3>
+                </div>
+                <div class="flex-none w-48 md:w-64">
+                    <img src="/placeholder.svg?height=360&width=256" alt="Anchorman" class="w-full h-36 md:h-48 object-cover rounded hover:scale-105 transition-transform cursor-pointer">
+                    <h3 class="mt-2 text-sm font-medium">Anchorman</h3>
+                </div>
+                <div class="flex-none w-48 md:w-64">
+                    <img src="/placeholder.svg?height=360&width=256" alt="Step Brothers" class="w-full h-36 md:h-48 object-cover rounded hover:scale-105 transition-transform cursor-pointer">
+                    <h3 class="mt-2 text-sm font-medium">Step Brothers</h3>
+                </div>
+                <div class="flex-none w-48 md:w-64">
+                    <img src="/placeholder.svg?height=360&width=256" alt="Dumb and Dumber" class="w-full h-36 md:h-48 object-cover rounded hover:scale-105 transition-transform cursor-pointer">
+                    <h3 class="mt-2 text-sm font-medium">Dumb and Dumber</h3>
+                </div>
+                <div class="flex-none w-48 md:w-64">
+                    <img src="/placeholder.svg?height=360&width=256" alt="Zoolander" class="w-full h-36 md:h-48 object-cover rounded hover:scale-105 transition-transform cursor-pointer">
+                    <h3 class="mt-2 text-sm font-medium">Zoolander</h3>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-netflix-dark px-4 md:px-16 py-12">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="font-semibold mb-4">Empresa</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Acerca de</a></li>
+                        <li><a href="#" class="hover:text-white">Empleos</a></li>
+                        <li><a href="#" class="hover:text-white">Prensa</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Soporte</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Centro de ayuda</a></li>
+                        <li><a href="#" class="hover:text-white">Contacto</a></li>
+                        <li><a href="#" class="hover:text-white">Términos de uso</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Cuenta</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Mi cuenta</a></li>
+                        <li><a href="#" class="hover:text-white">Privacidad</a></li>
+                        <li><a href="#" class="hover:text-white">Prueba gratuita</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Conecta</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Facebook</a></li>
+                        <li><a href="#" class="hover:text-white">Twitter</a></li>
+                        <li><a href="#" class="hover:text-white">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
+                <p>&copy; 2024 CineFlix. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</body>
